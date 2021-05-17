@@ -6,5 +6,6 @@ const pythonEditor = CodeMirror.fromTextArea(document.getElementById("python"),{
 const htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
 	mode:"xml",
 	lineNumbers:true,
-	theme:"dracula"
+	theme:"dracula",
+	autoCloseTags:true
 })
