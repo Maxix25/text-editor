@@ -1,7 +1,8 @@
 const pythonEditor = CodeMirror.fromTextArea(document.getElementById("python"),{
 	mode: "python",
 	lineNumbers:true,
-	theme:"monokai"
+	theme:"monokai",
+	autoCloseBrackets:true
 });
 const htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
 	mode:"xml",
