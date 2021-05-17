@@ -1,22 +1,121 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
-	<link rel="stylesheet" type="text/css" href="codemirror/lib/codemirror.css">
-	<script  type="text/javascript" src="codemirror/mode/xml/xml.js"></script>
-	<script src="codemirror/mode/python/python.js"></script>
-	<script src="codemirror/addon/edit/closetag.js"></script>
-	<script src="codemirror/addon/edit/closebrackets.js"></script>
-	<link rel="stylesheet" href="codemirror/theme/monokai.css">
+  <head>
+    <title></title>
+    <script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="codemirror/lib/codemirror.css"
+    />
+    <script type="text/javascript" src="codemirror/mode/xml/xml.js"></script>
+    <script src="codemirror/mode/python/python.js"></script>
+    <script src="codemirror/addon/edit/closetag.js"></script>
+    <script src="codemirror/addon/edit/closebrackets.js"></script>
+    <link rel="stylesheet" href="codemirror/theme/base16-dark.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      h2 {
+        text-align: right;
+      }
+      h2 p {
+        text-align: left;
+      }
+      #myBtn {
+        padding-left: 60px;
+        padding-right: 60px;
+      }
+    </style>
+  </head>
+  <body class="p-2 pt-4" style="background: #242629">
+    <div class="row">
+      <div class="col-md-4">
+        <h6>
+          <div class="card" style="background: #16161a">
+            <div class="card-body p-2">
+              <p class="card-text small p-1 text-white">
+                Room Code: <span class="text-secondary">1jk41248</span>
+              </p>
+            </div>
+          </div>
+        </h6>
 
-</head>
-<body>
-	<h1>PYTHON CODE</h1>
-	<textarea name="python" id="python" cols="30" rows="10"></textarea>
-	<h1>HTML CODE</h1>
-	<textarea name="html" id="html" cols="30" rows="10"></textarea>
+        <textarea
+          cols="60"
+          rows="25"
+          style="
+            margin-top: 0px;
+            margin-bottom: 0px;
+            height: 674px;
+            background: #16161a;
+            color: #94a1b2 !important;
+            border: none;
+          "
+        >
+Some quick example text to build on the card title and make up the bulk of the card's content.</textarea
+        >
+        <!-- <div
+          class="card"
+          style="
+            margin-top: 0px;
+            margin-bottom: 0px;
+            height: 674px;
+            background: #16161a;
+          "
+        >
+          <div class="card-body">
+            <h5 class="card-title text-white">Card title</h5>
+            <p class="card-text" style="color: #94a1b2 !important">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div> -->
+      </div>
 
-	<script type="text/javascript" src="main.js"></script>
-</body>
+      <div class="col-md-8">
+        <div class="container-fluid">
+          <h2>
+            <button type="button" class="btn btn-dark">
+              <i class="fas fa-redo"></i>
+            </button>
+            <button type="button" class="btn btn-primary" id="myBtn">
+              Run Code
+            </button>
+          </h2>
+        </div>
+        <textarea name="html" id="html" cols="35" rows="10"></textarea>
+        <br />
+        <div class="container">
+          <h2>
+            <button type="button" class="btn btn-success mt-2" id="myBtn">
+              Submit code
+            </button>
+          </h2>
+        </div>
+        <textarea name="python" id="python" cols="35" rows="10"></textarea>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+    ></script>
+  </body>
 </html>
