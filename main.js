@@ -8,7 +8,6 @@ const pythonEditor = CodeMirror.fromTextArea(
   }
 );
 
-
 const htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
   mode: "xml",
   lineNumbers: true,

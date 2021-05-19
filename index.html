@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <!-- LEAVE BUTTON ON NAVBAR -->
+
+    <title>Code Editors</title>
     <script type="text/javascript" src="codemirror/lib/codemirror.js"></script>
     <link
       rel="stylesheet"
@@ -13,6 +15,8 @@
     <script src="codemirror/addon/edit/closetag.js"></script>
     <script src="codemirror/addon/edit/closebrackets.js"></script>
     <link rel="stylesheet" href="codemirror/theme/base16-dark.css" />
+    <!-- <link rel="stylesheet" href="codemirror/theme/material-darker.css" /> -->
+
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -39,9 +43,18 @@
         padding-left: 60px;
         padding-right: 60px;
       }
+
+      #pickLang {
+        background: #16161a;
+        color: white;
+        padding: 6px;
+        border-radius: 4px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
     </style>
   </head>
-  <body class="p-2 pt-4" style="background: #242629">
+  <body class="pt-4 p-2" style="background: #242629">
     <div class="row">
       <div class="col-md-4">
         <h6>
@@ -49,6 +62,16 @@
             <div class="card-body p-2">
               <p class="card-text small p-1 text-white">
                 Room Code: <span class="text-secondary">1jk41248</span>
+                <select
+                  class="browser-default custom-select"
+                  style="position: relative; left: 355px"
+                  id="pickLang"
+                >
+                  <option selected>Pick Langauge</option>
+                  <option value="1">Python</option>
+                  <option value="2">JavaScript</option>
+                  <option value="3">Node.js</option>
+                </select>
               </p>
             </div>
           </div>
@@ -86,28 +109,41 @@ Some quick example text to build on the card title and make up the bulk of the c
           </div>
         </div> -->
       </div>
-<body>
+
       <div class="col-md-8">
         <div class="container-fluid">
           <h2>
-            <button type="button" class="btn btn-dark">
+            <button
+              type="button"
+              class="btn"
+              style="background: #16161a; color: white"
+            >
               <i class="fas fa-redo"></i>
             </button>
-            <button type="button" class="btn btn-primary" id="myBtn">
+            <button type="button" class="btn btn-light" id="myBtn">
               Run Code
             </button>
-          </h2>
-        </div>
-        <textarea name="html" id="html" cols="35" rows="10"></textarea>
-        <br />
-        <div class="container">
-          <h2>
             <button type="button" class="btn btn-success mt-2" id="myBtn">
               Submit code
             </button>
           </h2>
         </div>
         <textarea name="python" id="python" cols="35" rows="10"></textarea>
+        <br />
+        <!-- <div class="container">
+          <h2>
+            <button type="button" class="btn btn-success mt-2" id="myBtn">
+              Submit code
+            </button>
+          </h2>
+        </div> -->
+        <textarea
+          style="background: #151515; border: none"
+          cols="122"
+          rows="13"
+          placeholder="Output"
+          readonly
+        ></textarea>
       </div>
     </div>
 
