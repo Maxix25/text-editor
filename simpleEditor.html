@@ -15,7 +15,7 @@
     <script src="codemirror/mode/python/python.js"></script>
 
     <!--Close tag support for HTML-->
-    <!-- <script src="codemirror/addon/edit/closetag.js"></script> -->
+    <script src="codemirror/addon/edit/closetag.js"></script>
 
     <!--Javascript syntax highlight-->
     <script src="codemirror/mode/javascript/javascript.js"></script>
@@ -42,6 +42,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css"
       rel="stylesheet"
     />
+
     <style>
       h2 {
         text-align: right;
@@ -66,89 +67,54 @@
         color: white;
         padding-top: 20px;
       }
-      .CodeMirror {
-        height: 500px;
-      }
 
-      .container {
-        margin: auto;
-        padding-left: 0px;
-        padding-right: 0px;
-      }
-      #mainBtn {
-        width: 150px;
-
-        transition: all 0.2s ease-in-out;
-        margin-right: 10px;
-      }
-
-      #mainBtn:hover {
-        transform: scale(1.07);
-      }
-
-      .resetBtn {
-        background: none !important;
-        transtion: all 0.2s ease-in-out;
-      }
-
-      .resetBtn:hover {
-        background: #ff4444 !important;
-        color: white;
-      }
-
-      h2 {
-        text-align: right !important;
-      }
-
-      #fullScrn:hover {
-        background: white;
-
-        color: black;
+      .header {
+        padding-left: 12px;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
       }
     </style>
   </head>
   <body class="pt-4 p-2" style="background: #242629">
-    <div class="container" style="padding-top: 70px">
-      <div class="row">
-        <div class="col-md-6">
-          <button class="btn btn-success btn-lg mb-2" id="mainBtn">
-            Run Code
-          </button>
-          <button
-            class="resetBtn btn btn-outline-danger btn-lg mb-2"
-            id="mainBtn"
-          >
-            Reset
-          </button>
-        </div>
-
-        <div class="col-md-6">
-          <h2>
-            <button
-              onclick="openFullscreen();"
-              class="btn btn-outline-light btn-lg mb-2 pull-right"
-              id="fullScrn"
-            >
-              <i class="fas fa-expand"></i>
-            </button>
-          </h2>
-        </div>
-      </div>
+    <div class="header">
+      <button id="runBtn" class="btn btn-primary btn-lg">Run Code</button>
+      <span class="p-2"></span>
+      <button id="runBtn" class="btn btn-danger btn-lg">Reset Code</button>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
-          <textarea name="python" id="js" cols="35" rows="10"></textarea>
-        </div>
-        <div class="col-md-6">
+        <div class="col-md-7">
+          <textarea
+            name="python"
+            id="html"
+            cols="35"
+            rows="10"
+            placeholder="HTML"
+          ></textarea>
+          <h1></h1>
           <textarea
             name="python"
             id="python"
             cols="35"
             rows="10"
-            placeholder="Output"
+            placeholder="Python"
           ></textarea>
+          <h1></h1>
+          <textarea
+            name="python"
+            id="js"
+            cols="35"
+            rows="10"
+            placeholder="JavaScript"
+          ></textarea>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="preview">
+          <iframe id="preview-window"></iframe>
         </div>
       </div>
     </div>
@@ -159,20 +125,5 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
     ></script>
-
-    <script>
-      var elem = document.documentElement;
-      function openFullscreen() {
-        if (elem.requestFullscreen) {
-          elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {
-          /* Safari */
-          elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-          /* IE11 */
-          elem.msRequestFullscreen();
-        }
-      }
-    </script>
   </body>
 </html>
