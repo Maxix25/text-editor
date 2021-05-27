@@ -3,7 +3,7 @@ const pythonEditor = CodeMirror.fromTextArea(
   {
     mode: "python",
     lineNumbers: true,
-    theme: "base16-dark",
+    theme: "material-darker",
     autoCloseBrackets: true,
   }
 );
@@ -18,6 +18,6 @@ const pythonEditor = CodeMirror.fromTextArea(
 const jsEditor = CodeMirror.fromTextArea(document.getElementById("js"), {
   mode: "javascript",
   lineNumbers: true,
-  theme: "base16-dark",
+  theme: "material-darker",
   autoCloseBrackets: true,
 });
