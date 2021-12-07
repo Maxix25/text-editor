@@ -21,3 +21,10 @@ const jsEditor = CodeMirror.fromTextArea(document.getElementById("js"), {
   theme: "material-darker",
   autoCloseBrackets: true,
 });
+
+const cplusEditor = CodeMirror.fromTextArea(document.getElementById("cpp"), {
+  mode: "text/x-c++src",
+  lineNumbers: true,
+  theme: "material-darker",
+  autoCloseBrackets: true,
+});
